@@ -19,8 +19,20 @@
 
 ## 1. Overview <a name="overview"></a>
 
-The **BikeML-API** explores the relationship between weather conditions and bike-sharing usage in Montreal. It includes a machine learning pipeline to predict trip durations based on weather and temporal features, as well as an API for serving predictions. The findings aim to help bike-sharing operators like BIXI optimize operations and user satisfaction.
+Dynamic pricing is a strategy employed by businesses to adjust prices in response to real-time market conditions such as demand, supply, and customer behavior. In the context of ride-sharing companies, dynamic pricing ensures optimal fare calculation, balancing customer satisfaction, driver availability, and company profitability.
 
+This project aims to leverage machine learning techniques to build a dynamic pricing model using historical ride data. The model predicts ride fares by considering multiple factors, such as the number of riders, drivers, location, customer loyalty status, and ride duration. This data-driven approach enables the ride-sharing company to optimize pricing strategies, improve operational efficiency, and meet real-time market needs.
+
+### Purpose:
+The primary purpose of this project is to develop a predictive model that helps a ride-sharing company implement dynamic pricing. Currently, the company calculates fares solely based on ride duration, limiting its ability to adapt to fluctuating demand and supply conditions. By incorporating additional features into a machine learning model, the company can:
+
+- **Optimize Pricing: Dynamically adjust fares to reflect market conditions.
+
+- **Enhance Customer Satisfaction: Prevent overpricing during low-demand periods and ensure availability during peak times.
+
+- **Improve Driver Retention: Set competitive fares to attract drivers during high-demand periods.
+
+- **Increase Profitability: Use data-driven insights to maximize revenue.
 ---
 
 ## 2. Project Goals <a name="project-goals"></a>
