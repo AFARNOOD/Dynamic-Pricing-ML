@@ -8,7 +8,7 @@
 
 - [1. Overview](#overview)
 - [2. Goals of the Analysis](#project-goals)
-- [3. Project Features](#project-features)
+- [3. Dataset](#project-features)
 - [4. Tools and Frameworks](#tools-and-frameworks)
 - [5. Directory Structure](#directory-structure)
 - [6. Reproducibility](#reproducibility)
@@ -66,11 +66,23 @@ The goals of this project are:
 
 ---
 
-## 3. Project Features <a name="project-features"></a>
+## 3. Dataset <a name="project-features"></a>
 
-- **Weather and Trip Data Integration**: Combining weather observations with BIXI trip data for comprehensive analysis.
-- **Machine Learning Model**: A Random Forest model trained to predict trip durations.
-- **API Deployment**: A Flask API for serving predictions based on user-input weather and temporal features.
+The dataset contains the following features:
+
+| Feature Name               | Description                                                                 |
+|----------------------------|-----------------------------------------------------------------------------|
+| `Number_of_Riders`         | Total number of ride requests.                                              |
+| `Number_of_Drivers`        | Total number of available drivers.                                          |
+| `Location_Category`        | Type of location (e.g., Urban, Suburban, Rural).                            |
+| `Customer_Loyalty_Status`  | Customer loyalty level (e.g., Silver, Regular).                             |
+| `Number_of_Past_Rides`     | Total number of rides completed by the customer.                            |
+| `Average_Ratings`          | Customer’s average ride ratings.                                           |
+| `Time_of_Booking`          | Time of day when the ride was booked (e.g., Night, Evening, Afternoon).      |
+| `Vehicle_Type`             | Type of vehicle used (e.g., Premium, Economy).                              |
+| `Expected_Ride_Duration`   | Predicted duration of the ride in minutes.                                  |
+| `Historical_Cost_of_Ride`  | Actual cost of the ride (target variable for prediction).                    |
+
 
 ---
 
