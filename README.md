@@ -33,7 +33,27 @@ The primary purpose of this project is to develop a predictive model that helps 
 
 ### Goals of the Analysis:
 
+1. Understand Historical Ride Data
+Perform an exploratory data analysis (EDA) to:
+Identify key trends and patterns in ride demand and pricing.
+Investigate correlations between features (e.g., Number_of_Riders, Location_Category) and the target variable (Historical_Cost_of_Ride).
+Understand how different factors like time of booking, vehicle type, and location influence ride costs.
+2. Develop a Predictive Model
+Build and evaluate machine learning models to:
+Accurately predict ride fares based on the provided features.
+Compare performance across various algorithms (e.g., Linear Regression, Random Forest, XGBoost).
+Tune hyperparameters for optimal performance.
 
+3. Feature Engineering
+Create additional features to enhance model accuracy:
+Demand-Supply Ratio: Ratio of riders to drivers.
+Interaction terms like Expected_Ride_Duration × Average_Ratings.
+
+4. Model Deployment
+Develop a real-time prediction system by:
+Creating an API using Flask or FastAPI for predicting ride fares.
+Containerizing the application with Docker for scalability.
+Deploying the application to a cloud platform (e.g., Heroku, AWS, Render).
 ---
 
 ## 2. Project Goals <a name="project-goals"></a>
