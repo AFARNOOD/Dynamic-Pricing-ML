@@ -31,7 +31,7 @@ The primary purpose of this project is to develop a predictive model that helps 
 - **Improve Driver Retention**: Set competitive fares to attract drivers during high-demand periods.
 - **Increase Profitability**: Use data-driven insights to maximize revenue.
 
-### 2. Goals of the Analysis
+## 2. Goals of the Analysis <a name="project-goals"></a>
 
 1. Understand Historical Ride Data
 - Perform an exploratory data analysis (EDA) to:
@@ -57,7 +57,7 @@ The primary purpose of this project is to develop a predictive model that helps 
 - Deploying the application to a cloud platform (e.g., Heroku, AWS, Render).
 ---
 
-## 2. Project Goals <a name="project-goals"></a>
+## 2. Project Goals 
 
 The goals of this project are:
 1. To analyze how weather conditions affect the duration of bike-sharing trips.
