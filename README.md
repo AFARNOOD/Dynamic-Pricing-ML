@@ -7,7 +7,7 @@
 ## Contents
 
 - [1. Overview](#overview)
-- [2. Project Goals](#project-goals)
+- [2. Goals of the Analysis](#project-goals)
 - [3. Project Features](#project-features)
 - [4. Tools and Frameworks](#tools-and-frameworks)
 - [5. Directory Structure](#directory-structure)
@@ -31,7 +31,7 @@ The primary purpose of this project is to develop a predictive model that helps 
 - **Improve Driver Retention**: Set competitive fares to attract drivers during high-demand periods.
 - **Increase Profitability**: Use data-driven insights to maximize revenue.
 
-### Goals of the Analysis:
+### 2. Goals of the Analysis
 
 1. Understand Historical Ride Data
 - Perform an exploratory data analysis (EDA) to:
