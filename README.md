@@ -30,6 +30,10 @@ The primary purpose of this project is to develop a predictive model that helps 
 - **Enhance Customer Satisfaction**: Prevent overpricing during low-demand periods and ensure availability during peak times.
 - **Improve Driver Retention**: Set competitive fares to attract drivers during high-demand periods.
 - **Increase Profitability**: Use data-driven insights to maximize revenue.
+
+### Goals of the Analysis:
+
+
 ---
 
 ## 2. Project Goals <a name="project-goals"></a>
