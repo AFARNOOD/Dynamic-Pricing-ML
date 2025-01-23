@@ -27,11 +27,8 @@ This project aims to leverage machine learning techniques to build a dynamic pri
 The primary purpose of this project is to develop a predictive model that helps a ride-sharing company implement dynamic pricing. Currently, the company calculates fares solely based on ride duration, limiting its ability to adapt to fluctuating demand and supply conditions. By incorporating additional features into a machine learning model, the company can:
 
 - **Optimize Pricing**: Dynamically adjust fares to reflect market conditions.
-
 - **Enhance Customer Satisfaction**: Prevent overpricing during low-demand periods and ensure availability during peak times.
-
 - **Improve Driver Retention**: Set competitive fares to attract drivers during high-demand periods.
-
 - **Increase Profitability**: Use data-driven insights to maximize revenue.
 ---
 
