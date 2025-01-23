@@ -1,6 +1,6 @@
 # Dynamic Pricing Optimization: Predicting Ride Fares with Machine Learning
 
-<img https://github.com/AFARNOOD/Dynamic-Pricing-ML/blob/main/imgs/Dynamic%20Pricing%20ML.webp " width="700" height="400">
+<img src="https://github.com/AFARNOOD/Dynamic-Pricing-ML/blob/main/imgs/Dynamic%20Pricing%20ML.webp " width="700" height="400">
 
 ---
 
