@@ -34,9 +34,9 @@ The primary purpose of this project is to develop a predictive model that helps 
 ### Goals of the Analysis:
 
 1. Understand Historical Ride Data
-Perform an exploratory data analysis (EDA) to:
-Identify key trends and patterns in ride demand and pricing.
-Investigate correlations between features (e.g., Number_of_Riders, Location_Category) and the target variable (Historical_Cost_of_Ride).
+- Perform an exploratory data analysis (EDA) to:
+- Identify key trends and patterns in ride demand and pricing.
+- Investigate correlations between features (e.g., Number_of_Riders, Location_Category) and the target variable (Historical_Cost_of_Ride).
 Understand how different factors like time of booking, vehicle type, and location influence ride costs.
 2. Develop a Predictive Model
 Build and evaluate machine learning models to:
