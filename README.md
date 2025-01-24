@@ -8,6 +8,9 @@
 - [Problem Description](#problem-description)
 - [Why This Project?](#why-this-project)
 - [Exploratory Data Analysis (EDA)](#exploratory-data-analysis)
+- [Dataset](#dataset)
+- [Tools and Frameworks](#tools-and-frameworks)](#dataset)
+- [Directory Structure](#directory-structure)
 - [Model Training and Selection](#model-training-and-selection)
 - [Model Deployment](#model-deployment)
 - [Reproducibility](#reproducibility)
@@ -84,7 +87,7 @@ A critical step in the project was to explore the dataset to uncover insights, h
 ---
 
 
-## 3. Dataset <a name="project-features"></a>
+## Dataset <a name="dataset"></a>
 
 The dataset contains the following features:
 
@@ -104,7 +107,7 @@ The dataset contains the following features:
 
 ---
 
-## 4. Tools and Frameworks <a name="tools-and-frameworks"></a>
+## Tools and Frameworks <a name="tools-and-frameworks"></a>
 
 ### Tools:
 - **Python**: Data preprocessing, model training, and API development.
@@ -122,7 +125,7 @@ The dataset contains the following features:
 
 ---
 
-## 5. Directory Structure <a name="directory-structure"></a>
+## Directory Structure <a name="directory-structure"></a>
 
 ```plaintext
 BikeML-API/
