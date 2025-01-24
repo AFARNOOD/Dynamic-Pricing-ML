@@ -200,72 +200,69 @@ The trained model was deployed as a REST API using Flask:
 ```
 
 3. **Output Example**:
-The API responds with a JSON object containing the predicted cost. For example:
-
 ```json
 {
   "predicted_cost": 652.77
 }
 ```
----
----
 
 ---
 
 ## Reproducibility
-This project is fully reproducible with the following steps:
-
-1. **Dataset Access**:  
-   The dataset used for training the model is either included in the repository or instructions are provided for downloading it.
-
-2. **Execution of Scripts**:  
-   Separate scripts for training (`train_model.py`) and running the API (`app.py`) ensure clarity and separation of concerns.
-
-3. **Step-by-Step Guide**:  
-   Clear instructions are provided to execute the notebook, scripts, and API endpoint.
+To ensure the project can be reproduced:
+1. **Data**:
+   - Dataset is provided in the repository or includes instructions for downloading.
+2. **Scripts**:
+   - Separate Python scripts are available for training and testing the model.
+3. **Instructions**:
+   - A step-by-step guide is included to run the project.
 
 ---
 
 ## Dependency and Environment Management
-1. **Dependency Management**:  
-   All dependencies required to run this project are listed in the `requirements.txt` file. This ensures consistency across different environments.
+1. **Dependencies**:
+   - Listed in `requirements.txt` for easy installation.
+   - Key dependencies: Flask, scikit-learn, pandas, numpy.
+2. **Virtual Environment**:
+   - Instructions to set up the environment:
+     ```bash
+     python -m venv env
+     source env/bin/activate  # Linux/Mac
+     env\Scripts\activate  # Windows
+     pip install -r requirements.txt
+     ```
 
-2. **Setting Up a Virtual Environment**:  
-   Use the following commands to set up and activate a virtual environment:
-   ```bash
-   python -m venv env
-   source env/bin/activate  # For Linux/MacOS
-   env\Scripts\activate     # For Windows
-   pip install -r requirements.txt
-   ```
+---
 ---
 
-## Containerization
+## How to Run
+### Local Setup
+1. Clone the repository:
+   ```bash
+   git clone <repo-url>
+   ```
+2. Navigate to the project directory and set up dependencies.
+3. Start the Flask API:
+   ```bash
+   python app.py
+   ```
 
-To ensure the portability and consistency of the application across different environments, this project includes containerization with Docker.
-
-### Steps to Build and Run the Docker Container:
-1. Build the Docker image using the provided `Dockerfile`:
+### Docker Setup
+1. Build the image:
    ```bash
    docker build -t dynamic-pricing-api .
    ```
-
-### Steps to Build and Run the Docker Container:
-2. Run the Docker container:
+2. Run the container:
    ```bash
    docker run -p 5000:5000 dynamic-pricing-api
    ```
 
-### Steps to Build and Run the Docker Container:
-3. Once the container is running, the Flask API will be accessible at:
-   ```bash
-   [docker build -t dynamic-pricing-api](http://127.0.0.1:5000)
-   ```
+### Testing the API
+Use tools like Postman or a Python script to send POST requests to the `/predict` endpoint.
 
 ---
 
-## Cloud Deployment
+## Acknowledgments
+This project was developed as part of the ML Zoomcamp course. Special thanks to the course team for providing a structured learning environment and clear evaluation criteria.
 
-This project is designed for deployment on cloud platforms such as AWS, Google Cloud, or Azure. Containerized applications can be deployed to a Kubernetes cluster or any other container orchestration platform.
-
-### Deployment Instructions:
+---
