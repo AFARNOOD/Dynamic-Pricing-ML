@@ -1,70 +1,85 @@
 # Dynamic Pricing Optimization: Predicting Ride Fares with Machine Learning
 
-<img src="https://github.com/AFARNOOD/Dynamic-Pricing-ML/blob/main/imgs/Dynamic%20Pricing%20ML.webp " width="700" height="400">
+## Table of Contents
+- [Introduction](#introduction)
+- [Problem Description](#problem-description)
+- [Why This Project?](#why-this-project)
+- [Exploratory Data Analysis (EDA)](#exploratory-data-analysis)
+- [Model Training and Selection](#model-training-and-selection)
+- [Model Deployment](#model-deployment)
+- [Reproducibility](#reproducibility)
+- [Dependency and Environment Management](#dependency-and-environment-management)
+- [Containerization](#containerization)
+- [Cloud Deployment](#cloud-deployment)
+- [How to Run](#how-to-run)
+- [Acknowledgments](#acknowledgments)
 
 ---
 
-## Contents
+## Introduction
+Dynamic pricing has become an essential part of many industries, especially for ride-hailing platforms such as Uber, Lyft, and similar services. These platforms rely on pricing algorithms to adjust ride costs based on a combination of factors such as supply-demand imbalances, location, trip duration, customer loyalty, and more. This project aims to develop a machine learning model to predict ride costs dynamically, providing fair and accurate pricing that benefits both customers and service providers.
 
-- [1. Overview](#overview)
-- [2. Goals of the Analysis](#project-goals)
-- [3. Dataset](#project-features)
-- [4. Tools and Frameworks](#tools-and-frameworks)
-- [5. Directory Structure](#directory-structure)
-- [6. Reproducibility](#reproducibility)
-- [7. How to Use the API](#api-usage)
-- [8. Data Sources](#data-sources)
+The solution involves building a robust machine learning pipeline that includes data preprocessing, exploratory data analysis, feature engineering, model training, evaluation, and deployment as a REST API. This API enables real-time predictions of ride costs for practical use cases.
 
 ---
 
-## 1. Overview <a name="overview"></a>
+## Problem Description
+The primary challenge in ride-hailing services is to dynamically and accurately determine the cost of a ride based on various factors while ensuring:
+1. **Customer Satisfaction**: Pricing should reflect fairness and transparency to retain user trust.
+2. **Profitability for Providers**: The model should balance supply and demand effectively to maximize revenue while maintaining affordability for customers.
+3. **Scalability**: The solution must handle large-scale data inputs for real-time predictions.
 
-Dynamic pricing is a strategy employed by businesses to adjust prices in response to real-time market conditions such as demand, supply, and customer behavior. In the context of ride-sharing companies, dynamic pricing ensures optimal fare calculation, balancing customer satisfaction, driver availability, and company profitability.
+In this project, we predict the **cost of rides** using features like:
+- Number of available drivers and riders.
+- Ratings and past ride history.
+- Supply-demand metrics and location categories.
+- Trip-specific factors such as ride duration and vehicle type.
 
-This project aims to leverage machine learning techniques to build a dynamic pricing model using historical ride data. The model predicts ride fares by considering multiple factors, such as the number of riders, drivers, location, customer loyalty status, and ride duration. This data-driven approach enables the ride-sharing company to optimize pricing strategies, improve operational efficiency, and meet real-time market needs.
-
-### Purpose:
-The primary purpose of this project is to develop a predictive model that helps a ride-sharing company implement dynamic pricing. Currently, the company calculates fares solely based on ride duration, limiting its ability to adapt to fluctuating demand and supply conditions. By incorporating additional features into a machine learning model, the company can:
-
-- **Optimize Pricing**: Dynamically adjust fares to reflect market conditions.
-- **Enhance Customer Satisfaction**: Prevent overpricing during low-demand periods and ensure availability during peak times.
-- **Improve Driver Retention**: Set competitive fares to attract drivers during high-demand periods.
-- **Increase Profitability**: Use data-driven insights to maximize revenue.
-
-## 2. Goals of the Analysis <a name="project-goals"></a>
-
-1. Understand Historical Ride Data
-- Perform an exploratory data analysis (EDA) to:
-- Identify key trends and patterns in ride demand and pricing.
-- Investigate correlations between features (e.g., Number_of_Riders, Location_Category) and the target variable (Historical_Cost_of_Ride).
-- Understand how different factors like time of booking, vehicle type, and location influence ride costs.
-
-2. Develop a Predictive Model
-- Build and evaluate machine learning models to:
-- Accurately predict ride fares based on the provided features.
-- Compare performance across various algorithms (e.g., Linear Regression, Random Forest, XGBoost).
-- Tune hyperparameters for optimal performance.
-
-3. Feature Engineering
-- Create additional features to enhance model accuracy:
-- Demand-Supply Ratio: Ratio of riders to drivers.
-- Interaction terms like Expected_Ride_Duration × Average_Ratings.
-
-4. Model Deployment
-- Develop a real-time prediction system by:
-- Creating an API using Flask or FastAPI for predicting ride fares.
-- Containerizing the application with Docker for scalability.
-- Deploying the application to a cloud platform (e.g., Heroku, AWS, Render).
----
-
-## 2. Project Goals 
-
-The goals of this project are:
-1. To analyze how weather conditions affect the duration of bike-sharing trips.
-2. To build and deploy a machine learning model that predicts trip durations.
-3. To provide actionable insights for bike-sharing companies to optimize bike availability.
+This predictive model is built with the intention of:
+1. Supporting **pricing teams** in optimizing ride costs.
+2. **Enhancing transparency** by providing an explainable model.
+3. Offering real-time predictions for **dynamic pricing strategies**.
 
 ---
+
+## Why This Project?
+Dynamic pricing is a critical operational component in the ride-hailing industry, and it serves multiple purposes:
+- **Demand-Supply Management**: Ensuring sufficient driver availability by incentivizing driver participation during high-demand periods.
+- **Customer Retention**: Offering affordable pricing options to customers in less competitive locations or periods.
+- **Profit Optimization**: Calculating optimal ride costs to maximize profitability while maintaining high utilization rates.
+
+This prediction model can be implemented in:
+- **Operational Dashboards**: Enabling service providers to view real-time predictions and adjust strategies.
+- **Customer Applications**: Offering upfront cost estimates that align with dynamic pricing algorithms.
+
+By leveraging machine learning, we aim to create a scalable, efficient, and accurate model for dynamic pricing.
+
+---
+
+## Exploratory Data Analysis (EDA)
+A critical step in the project was to explore the dataset to uncover insights, handle missing values, and prepare the data for modeling. Key analyses include:
+
+1. **Understanding Feature Distributions**:
+   - Distribution of numerical features such as `number_of_riders`, `average_ratings`, and `expected_ride_duration`.
+   - Relationships between features and the target variable (`ride_cost`).
+   - Histograms, box plots, and density plots.
+
+2. **Target Variable Analysis**:
+   - Investigated the distribution of ride costs, looking for outliers or skewness.
+
+3. **Feature Correlations**:
+   - Used heatmaps to identify correlated features to reduce multicollinearity.
+   - Determined important features using feature importance scores from tree-based models.
+
+4. **Handling Missing Values**:
+   - Checked for missing data in each feature.
+   - Imputed missing values based on statistical methods or domain knowledge.
+
+5. **Outlier Detection**:
+   - Identified and handled outliers in numerical features to avoid biased predictions.
+
+---
+
 
 ## 3. Dataset <a name="project-features"></a>
 
@@ -110,7 +125,7 @@ The dataset contains the following features:
 BikeML-API/
 │
 ├── data/
-│   ├── bixi_data_2021.csv                      # BIXI bike-sharing trip data (Git LFS tracked)
+│   ├── gradient_boosting_model.csv             # BIXI bike-sharing trip data (Git LFS tracked)
 │   ├── weather_data_2021.csv                   # Weather data for Montreal (Git LFS tracked)
 │   ├── refined_combined_data_with_features.xls # Final processed dataset (Git LFS tracked)
 │   └── ...
@@ -119,8 +134,7 @@ BikeML-API/
 │   └── ...
 │
 ├── models/
-│   ├── bike_duration_predictor.pkl             # Trained model for predictions
-│   ├── tuned_random_forest.pkl                 # Tuned Random Forest model
+│   ├── gradient_boosting_model.pkl             # Trained model for predictions
 │   └── ...
 │
 ├── notebooks/
@@ -138,106 +152,120 @@ plaintext
 
 ```
 
+
+
 ---
 
-## 6. Reproducibility <a name="reproducibility"></a>
+## Model Training and Selection
+### **Training Process**
+We trained multiple models to ensure robust performance and selected the best-performing one:
+1. **Trained Models**:
+   - Linear Regression: Provided a baseline model for comparison.
+   - Decision Trees: Used for capturing non-linear relationships.
+   - Random Forests: Improved performance through ensemble learning.
+   - Gradient Boosting Regressor: Achieved the best overall performance with hyperparameter tuning.
 
-### Steps to Reproduce:
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/AFARNOOD/BikeML-API.git
-   cd BikeML-API
+2. **Hyperparameter Tuning**:
+   - Utilized GridSearchCV and RandomizedSearchCV to optimize parameters such as learning rate, tree depth, and the number of estimators.
 
-2. Set up Python dependencies:
+3. **Evaluation Metrics**:
+   - Mean Absolute Error (MAE).
+   - Root Mean Squared Error (RMSE).
+   - R² Score.
+
+### **Final Model**
+The **Gradient Boosting Regressor** was chosen for its superior performance in capturing complex relationships between features and the target variable.
+
+---
+
+## Model Deployment
+The trained model was deployed as a REST API using Flask:
+1. **Endpoints**:
+   - `/`: Returns a welcome message.
+   - `/predict`: Accepts JSON input and returns a predicted cost.
+
+2. **Input Example**:
+```json
+{
+  "number_of_riders": 50,
+  "number_of_drivers": 30,
+  "number_of_past_rides": 15,
+  "average_ratings": 4.5,
+  "expected_ride_duration": 60,
+  "location_category_Urban": 1,
+  "location_category_Suburban": 0,
+  "customer_loyalty_status_Regular": 0,
+  "demand_supply_ratio": 1.0
+}
+```
+
+3. **Output Example**:
+The API responds with a JSON object containing the predicted cost. For example:
+
+```json
+{
+  "predicted_cost": 652.77
+}
+```
+---
+---
+
+---
+
+## Reproducibility
+This project is fully reproducible with the following steps:
+
+1. **Dataset Access**:  
+   The dataset used for training the model is either included in the repository or instructions are provided for downloading it.
+
+2. **Execution of Scripts**:  
+   Separate scripts for training (`train_model.py`) and running the API (`app.py`) ensure clarity and separation of concerns.
+
+3. **Step-by-Step Guide**:  
+   Clear instructions are provided to execute the notebook, scripts, and API endpoint.
+
+---
+
+## Dependency and Environment Management
+1. **Dependency Management**:  
+   All dependencies required to run this project are listed in the `requirements.txt` file. This ensures consistency across different environments.
+
+2. **Setting Up a Virtual Environment**:  
+   Use the following commands to set up and activate a virtual environment:
    ```bash
+   python -m venv env
+   source env/bin/activate  # For Linux/MacOS
+   env\Scripts\activate     # For Windows
    pip install -r requirements.txt
+   ```
+---
 
-3. Download the required datasets or ensure they are placed in the `data/` directory.
-4. Run the Jupyter Notebooks in the `notebooks/` directory to preprocess the data or retrain the model.
+## Containerization
 
+To ensure the portability and consistency of the application across different environments, this project includes containerization with Docker.
 
-## 7. How to Use the API <a name="api-usage"></a>
-
-To use the API for predictions, follow these steps:
-
-1. **Run the Flask App**:
-   Ensure the Flask API is running locally. Start the API by executing the following command in your terminal:
-
+### Steps to Build and Run the Docker Container:
+1. Build the Docker image using the provided `Dockerfile`:
    ```bash
-   python app.py
-      ```
-
-   The server will run on `http://127.0.0.1:5000`.
-
-2. **Send a POST Request**:
-   Use the provided `predict_request.ps1` script or your preferred tool (e.g., Postman, cURL) to send a request with input data for prediction. The input JSON must include the following features:
-
-   ```json
-   {
-       "max_temp_c": 20,
-       "min_temp_c": 7,
-       "temp_range_c": 18,
-       "total_precip_mm": 2,
-       "snow_on_grnd_cm": 0,
-       "spd_of_max_gust_kmh": 10,
-       "is_rainy": 1,
-       "is_snowy": 0,
-       "is_windy": 0,
-       "start_hour": 9,
-       "start_weekday": 1,
-       "is_weekend": 0
-   }
-   ```
-   
-3. **Example PowerShell Command**:
-   Run the following command in PowerShell to send the prediction request:
-
-   ```powershell
-   Invoke-RestMethod -Uri http://127.0.0.1:5000/predict `
-       -Method POST `
-       -ContentType "application/json" `
-       -Body '{"max_temp_c": 20, "min_temp_c": 7, "temp_range_c": 18, "total_precip_mm": 2, "snow_on_grnd_cm": 0, "spd_of_max_gust_kmh": 10, "is_rainy": 1, "is_snowy": 0, "is_windy": 0, "start_hour": 9, "start_weekday": 1, "is_weekend": 0}'
+   docker build -t dynamic-pricing-api .
    ```
 
-4. **Example cURL Command**:
-   If you prefer using cURL, run this command in your terminal:
-
-   ```powershell
-   curl -X POST http://127.0.0.1:5000/predict \
-     -H "Content-Type: application/json" \
-     -d '{"max_temp_c": 20, "min_temp_c": 7, "temp_range_c": 18, "total_precip_mm": 2, "snow_on_grnd_cm": 0, "spd_of_max_gust_kmh": 10, "is_rainy": 1, "is_snowy": 0, "is_windy": 0, "start_hour": 9, "start_weekday": 1, "is_weekend": 0}'
-
+### Steps to Build and Run the Docker Container:
+2. Run the Docker container:
+   ```bash
+   docker run -p 5000:5000 dynamic-pricing-api
    ```
 
-5. **Expected Output**:
-   The API will respond with the predicted trip duration in seconds. Example response:
-
-   ```powershell
-   {
-    "predicted_duration_sec": 789
-   }
+### Steps to Build and Run the Docker Container:
+3. Once the container is running, the Flask API will be accessible at:
+   ```bash
+   [docker build -t dynamic-pricing-api](http://127.0.0.1:5000)
    ```
-
-
-> **Note**: For other tools or environments, ensure the JSON request body matches the required format and is sent as a POST request to the `/predict` endpoint.
 
 ---
 
-## 8. Data Sources <a name="data-sources"></a>
+## Cloud Deployment
 
-This project uses two primary datasets:
+This project is designed for deployment on cloud platforms such as AWS, Google Cloud, or Azure. Containerized applications can be deployed to a Kubernetes cluster or any other container orchestration platform.
 
-1. **Weather Data**:
-   - Source: Environment and Climate Change Canada (ECCC).
-   - Description: Includes daily and hourly weather data for Montreal in 2021.
-   - Features: Temperature, precipitation, wind speed, and other climatic conditions.
-
-   [Download Weather Data](https://climate.weather.gc.ca/)
-
-2. **BIXI Data**:
-   - Source: BIXI Montreal Open Data Portal.
-   - Description: Contains detailed trip records of BIXI bike-sharing users for 2021.
-   - Features: Trip start and end times, station locations, and duration.
-
-   [Download BIXI Data](https://bixi.com/en/open-data)
-
+### Deployment Instructions:
