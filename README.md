@@ -9,7 +9,7 @@
 - [Why This Project?](#why-this-project)
 - [Exploratory Data Analysis (EDA)](#exploratory-data-analysis)
 - [Dataset](#dataset)
-- [Tools and Frameworks](#tools-and-frameworks)](#dataset)
+- [Tools and Frameworks](#tools-and-frameworks)(#dataset)
 - [Directory Structure](#directory-structure)
 - [Model Training and Selection](#model-training-and-selection)
 - [Model Deployment](#model-deployment)
