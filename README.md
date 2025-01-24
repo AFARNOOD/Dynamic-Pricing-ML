@@ -131,9 +131,7 @@ The dataset contains the following features:
 BikeML-API/
 │
 ├── data/
-│   ├── gradient_boosting_model.csv             # BIXI bike-sharing trip data (Git LFS tracked)
-│   ├── weather_data_2021.csv                   # Weather data for Montreal (Git LFS tracked)
-│   ├── refined_combined_data_with_features.xls # Final processed dataset (Git LFS tracked)
+│   ├── dynamic_pricing.csv             
 │   └── ...
 │
 ├── imgs/                                       # (Optional) Visualization images
@@ -144,14 +142,13 @@ BikeML-API/
 │   └── ...
 │
 ├── notebooks/
-│   ├── BikeML01.ipynb                          # Data preprocessing and feature engineering
-│   ├── BikeML02.ipynb                          # Model training and evaluation
+│   ├── DPML.ipynb                              # Data preprocessing and feature engineering
+
 │   └── ...
 │
 ├── app.py                                      # Flask API script
 ├── predict_request.ps1                         # Script for making POST requests to the API
 ├── requirements.txt                            # Python dependencies
-├── Dockerfile                                  # Dockerfile for containerization (optional)
 └── README.md                                   # Project description and instructions
 
 plaintext
