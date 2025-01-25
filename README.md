@@ -143,7 +143,6 @@ BikeML-API/
 │
 ├── notebooks/
 │   ├── DPML.ipynb                              # Data preprocessing and feature engineering
-
 │   └── ...
 │
 ├── app.py                                      # Flask API script
